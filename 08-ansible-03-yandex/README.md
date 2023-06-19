@@ -71,7 +71,7 @@
   tags:
     - clickhouse
       
-# Vector, выполнено по тому же алгоритму и с пременением тех же модулей (Скачивание, установка, перезагрузка(в случае удачной отработки предид>
+# Vector, выполнено по тому же алгоритму и с пременением тех же модулей (Скачивание, установка, перезагрузка)
 - name: Vector installation
   hosts: vector
   tasks:
@@ -96,46 +96,46 @@
       notify: Start Vector service
   tags:
     - vector
-  
-- name: Install lighthouse
+# Установка lighthouse, использованны те же модули что идля предидущих плеев
+- name: Install lighthouse 
   hosts: lighthouse
-  handlers:
+  handlers: # Хэндлеры для запуска и перезагрузки nginx в случае удачной отработки тасок
     - name: start-nginx
       become: true
       ansible.builtin.command: "nginx"
-      when: not ansible_check_mode
+      when: not ansible_check_mode # Пропуск задач или игнорирование ошибок в режиме проверки
     - name: reload-nginx
       become: true
       ansible.builtin.command: "nginx -s reload"
-      when: not ansible_check_mode
-  tasks:
-    - name: Instal epel-release
+      when: not ansible_check_mode # Пропуск задач или игнорирование ошибок в режиме проверки
+  tasks: 
+    - name: Instal epel-release # установка пакета epel-release для nginx
       become: true
       ansible.builtin.yum:
         name: epel-release
-    - name: Install nginx
+    - name: Install nginx # установка nginx
       become: true
       ansible.builtin.yum:
         name: nginx
       notify: start-nginx
-    - name: Install git
+    - name: Install git # установка гита для установки lighthouse
       become: true
       ansible.builtin.yum:
         name: git
-    - name: Download lighthouse
+    - name: Download lighthouse # скачивание lighthouse в каталог
       become: true
       ansible.builtin.git:
         repo: 'https://github.com/VKCOM/lighthouse.git'
         dest: /var/www/lighthouse
         update: no
-    - name: Fix owner and mode
+    - name: Fix owner and mode # установка владельца и прав
       become: true
       ansible.builtin.file:
         path: /var/www/lighthouse
         state: directory
         mode: '0755'
         owner: ivan
-    - name: nginx config
+    - name: nginx config # копирование конфига lighthouse в конфиг nginx
       become: true
       ansible.builtin.template:
         src: template/lighthouse.j2
@@ -145,6 +145,12 @@
   tags:
     - lighthouse
 ...
+
+Использованны тэги:
+- clickhouse
+- vector
+- lighthouse
+
 11. Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-03-yandex` на фиксирующий коммит, в ответ предоставьте ссылку на него.
 
 ---
