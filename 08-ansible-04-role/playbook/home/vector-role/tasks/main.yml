@@ -1,0 +1,19 @@
+- name: Install additional tools
+  become: true
+  ansible.builtin.yum:
+    name:
+      - "vim-enhanced"
+      - "libstdc++"
+      - "glibc"
+    state: present
+- name: Downloading Vector distributives
+  ansible.builtin.get_url:
+    mode: 0644
+    url: "https://packages.timber.io/vector/0.21.1/{{ vector_latest }}.rpm"
+    dest: "/tmp/{{ vector_latest }}.rpm"
+- name: Install Vector packages
+  become: true
+  ansible.builtin.yum:
+    name: "/tmp/{{ vector_latest }}.rpm"
+    state: present
+  notify: Start Vector servicetags
