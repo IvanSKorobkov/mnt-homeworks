@@ -58,11 +58,11 @@ pull системы имеют следующие преимущества:
     - 
 ## Ответ:
 
-Zabbix: push и pull модель
-Prometheus: pull модель
-TICK - push модель
-VictoriaMetrics: push и pull модель
-Nagios: pull модель
+Zabbix: push и pull модель   
+Prometheus: pull модель   
+TICK - push модель   
+VictoriaMetrics: push и pull модель   
+Nagios: pull модель   
 
 7. Склонируйте себе [репозиторий](https://github.com/influxdata/sandbox/tree/master) и запустите TICK-стэк, 
 используя технологии docker и docker-compose.
