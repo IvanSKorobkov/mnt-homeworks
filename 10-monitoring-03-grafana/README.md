@@ -26,6 +26,8 @@
 1. Подключите поднятый вами prometheus, как источник данных.
 1. Решение домашнего задания — скриншот веб-интерфейса grafana со списком подключенных Datasource.
 
+   ![Image alt](https://github.com/IvanSKorobkov/mnt-homeworks/blob/MNT-video/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202023-10-06%2000-03-52.png)
+
 ## Задание 2
 
 Изучите самостоятельно ресурсы:
@@ -43,10 +45,30 @@
 
 Для решения этого задания приведите promql-запросы для выдачи этих метрик, а также скриншот получившейся Dashboard.
 
+![Image alt](https://github.com/IvanSKorobkov/mnt-homeworks/blob/MNT-video/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202023-10-05%2023-32-14.png)
+
+утилизация CPU для nodeexporter (в процентах, 100-idle)   
+(sum by(instance) (irate(node_cpu_seconds_total{instance="nodeexporter:9100",job="nodeexporter", mode!="idle"}[5m])) / on(instance) group_left sum by (instance)((irate(node_cpu_seconds_total{instance="nodeexporter:9100",job="nodeexporter"}[5m])))) * 100
+
+CPULA 1/5/15   
+(node_load1{instance="nodeexporter:9100",job="nodeexporter"})   
+(node_load5{instance="nodeexporter:9100",job="nodeexporter"})   
+(node_load15{instance="nodeexporter:9100",job="nodeexporter"})   
+
+количество свободной оперативной памяти   
+node_memory_MemFree_bytes{instance="nodeexporter:9100",job="nodeexporter"}   
+
+количество места на файловой системе   
+node_filesystem_avail_bytes{instance="nodeexporter:9100",job="nodeexporter",device!~'rootfs',fstype!='tmpfs',mountpoint='/'}
+
+
+
 ## Задание 3
 
 1. Создайте для каждой Dashboard подходящее правило alert — можно обратиться к первой лекции в блоке «Мониторинг».
 1. В качестве решения задания приведите скриншот вашей итоговой Dashboard.
+
+![Image alt](https://github.com/IvanSKorobkov/mnt-homeworks/blob/MNT-video/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202023-10-05%2023-56-58.png)
 
 ## Задание 4
 
