@@ -19,12 +19,18 @@ Free Cloud account имеет ограничения:
 
 В качестве решения задания пришлите скриншот меню Projects.
 
+  ![Image alt](https://github.com/IvanSKorobkov/mnt-homeworks/blob/MNT-video/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202023-10-11%2020-10-55.png)
+
 ## Задание 2
 
 1. Создайте python-проект и нажмите `Generate sample event` для генерации тестового события.
 1. Изучите информацию, представленную в событии.
 1. Перейдите в список событий проекта, выберите созданное вами и нажмите `Resolved`.
 1. В качестве решения задание предоставьте скриншот `Stack trace` из этого события и список событий проекта после нажатия `Resolved`.
+
+  ![Image alt](https://github.com/IvanSKorobkov/mnt-homeworks/blob/MNT-video/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202023-10-11%2020-15-43.png)
+  
+  ![Image alt](https://github.com/IvanSKorobkov/mnt-homeworks/blob/MNT-video/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202023-10-11%2020-20-52.png)
 
 ## Задание 3
 
@@ -38,6 +44,8 @@ Free Cloud account имеет ограничения:
 5. В качестве решения задания пришлите скриншот тела сообщения из оповещения на почте.
 6. Дополнительно поэкспериментируйте с правилами алёртинга. Выбирайте разные условия отправки и создавайте sample events. 
 
+  ![Image alt](https://github.com/IvanSKorobkov/mnt-homeworks/blob/MNT-video/Screenshot_2023-10-11-20-40-28-032_ru.yandex.mail.jpg)
+  
 ## Задание повышенной сложности
 
 1. Создайте проект на ЯП Python или GO (около 10–20 строк), подключите к нему sentry SDK и отправьте несколько тестовых событий.
