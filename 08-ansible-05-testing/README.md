@@ -20,8 +20,8 @@
 2. Перейдите в каталог с ролью vector-role и создайте сценарий тестирования по умолчанию при помощи `molecule init scenario --driver-name docker`.
 
 3. Добавьте несколько разных дистрибутивов (centos:8, ubuntu:latest) для инстансов и протестируйте роль, исправьте найденные ошибки, если они есть.
-<p>
- root@ivan:~/vector_role# ls
+
+<p root@ivan:~/vector_role# ls
 defaults  handlers  LICENSE  meta  molecule  README.md  tasks  templates  tests  vars
 root@ivan:~/vector_role# molecule test -s default
 INFO     default scenario test matrix: dependency, lint, cleanup, destroy, syntax, create, prepare, converge, idempotence, side_effect, verify, cleanup, destroy
@@ -255,8 +255,7 @@ TASK [Delete docker networks(s)] ***********************************************
 PLAY RECAP *********************************************************************
 localhost                  : ok=3    changed=2    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
 
-INFO     Pruning extra files from scenario ephemeral directory
-<p>
+INFO     Pruning extra files from scenario ephemeral directory <p>
 4. Добавьте несколько assert в verify.yml-файл для  проверки работоспособности vector-role (проверка, что конфиг валидный, проверка успешности запуска и др.).
  
 5. Запустите тестирование роли повторно и проверьте, что оно прошло успешно.
