@@ -22,6 +22,7 @@
 3. Добавьте несколько разных дистрибутивов (centos:8, ubuntu:latest) для инстансов и протестируйте роль, исправьте найденные ошибки, если они есть.
 <details>
 <summary>Подробнее ...</summary>
+```    
 root@ivan:~/vector_role# ls
 defaults  handlers  LICENSE  meta  molecule  README.md  tasks  templates  tests  vars
 root@ivan:~/vector_role# molecule test -s default
@@ -257,6 +258,7 @@ PLAY RECAP *********************************************************************
 localhost                  : ok=3    changed=2    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
 
 INFO     Pruning extra files from scenario ephemeral directory
+```
 <details>
 4. Добавьте несколько assert в verify.yml-файл для  проверки работоспособности vector-role (проверка, что конфиг валидный, проверка успешности запуска и др.).
  
