@@ -162,9 +162,17 @@ if __name__ == '__main__':
 
 **Шаг 4.** Проверьте module на исполняемость локально.
 
+### Ответ:
+
+![Image alt](https://github.com/IvanSKorobkov/mnt-homeworks/blob/MNT-video/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202023-10-21%2019-53-43.png)
+
 **Шаг 5.** Напишите single task playbook и используйте module в нём.
 
 **Шаг 6.** Проверьте через playbook на идемпотентность.
+
+### Ответ:
+
+![Image alt](https://github.com/IvanSKorobkov/mnt-homeworks/blob/MNT-video/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202023-10-21%2019-54-59.png)
 
 **Шаг 7.** Выйдите из виртуального окружения.
 
@@ -184,7 +192,15 @@ if __name__ == '__main__':
 
 **Шаг 15.** Установите collection из локального архива: `ansible-galaxy collection install <archivename>.tar.gz`.
 
+### Ответ:
+
+![Image alt](https://github.com/IvanSKorobkov/mnt-homeworks/blob/MNT-video/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202023-10-21%2020-32-40.png)
+
 **Шаг 16.** Запустите playbook, убедитесь, что он работает.
+
+### Ответ:
+
+![Image alt](https://github.com/IvanSKorobkov/mnt-homeworks/blob/MNT-video/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202023-10-21%2020-46-04.png)
 
 **Шаг 17.** В ответ необходимо прислать ссылки на collection и tar.gz архив, а также скриншоты выполнения пунктов 4, 6, 15 и 16.
 
