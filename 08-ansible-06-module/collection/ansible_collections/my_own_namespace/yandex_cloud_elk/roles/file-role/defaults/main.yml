@@ -1,0 +1,4 @@
+---
+# defaults file for file-role
+path: "/home/ivan/ansible/text.txt"
+content: "Ivan Korobkov"

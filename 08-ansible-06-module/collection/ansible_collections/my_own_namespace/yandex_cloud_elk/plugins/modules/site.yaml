@@ -1,0 +1,7 @@
+---
+- name: My own module test role
+  collections:
+    - my_own_namespace.yandex_cloud_elk
+  hosts: localhost
+  roles:
+    - file-role
